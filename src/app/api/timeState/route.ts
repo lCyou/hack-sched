@@ -3,7 +3,7 @@ import { TimeStateSchema } from '@/types/timeState';
 import { IDSchema } from '@/types/id';
 import { TimeState } from '@prisma/client';
 import { extractBody } from "@/lib/extractBody";
-import { db } from '@/lib/prisma';
+import db from '@/lib/prisma';
 
 //// ユーザーの予定を取得できる(変更するときの確認とかとか)
 // res : timestate?
