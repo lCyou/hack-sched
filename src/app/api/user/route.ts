@@ -1,6 +1,6 @@
 import { options } from "@/app/api/auth/[...nextauth]/options";
 import { extractBody } from "@/lib/extractBody";
-import { db } from "@/lib/prisma";
+import db from "@/lib/prisma";
 import { CreateUserSchema } from "@/types/createUser";
 import { User } from "@prisma/client";
 import { getServerSession } from "next-auth";

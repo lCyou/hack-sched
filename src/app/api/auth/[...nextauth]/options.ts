@@ -1,4 +1,4 @@
-import { db } from "@/lib/prisma";
+import db from "@/lib/prisma";
 import type { Session, User, DefaultSession, NextAuthOptions } from "next-auth";
 import { DefaultJWT, JWT } from "next-auth/jwt";
 import GithubProvider from "next-auth/providers/github";
@@ -15,7 +15,6 @@ export const options: NextAuthOptions = {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-
   secret: process.env.SECRET,
 
   session: {
@@ -60,5 +59,5 @@ export const options: NextAuthOptions = {
 
   events: {},
 
-  debug: true,
+  // debug: true,
 };
