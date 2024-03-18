@@ -40,3 +40,4 @@ next-env.d.ts
 
 # database 
 database/*
+prisma/migrations/*
