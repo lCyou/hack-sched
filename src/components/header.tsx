@@ -1,36 +1,24 @@
 'use client'
-import { useAnimation, Box, Heading, Image } from "@yamada-ui/react";
+import Image from "next/image";
+import { Box, Heading, LinkBox, LinkOverlay} from "@yamada-ui/react";
+import image from "@/../public/logo.png";
+import AuthButton from "@/components/authButton";
+import MButton from "@/components/menuButton";
 
 const Header = () => {
-  const animation = useAnimation({
-    keyframes: {
-      "0%": {
-        bg: "red.500",
-      },
-      "20%": {
-        bg: "green.500",
-      },
-      "40%": {
-        bg: "purple.500",
-      },
-      "60%": {
-        bg: "yellow.500",
-      },
-      "80%": {
-        bg: "blue.500",
-      },
-      "100%": {
-        bg: "red.500",
-      },
-    },
-    duration: "10s",
-    iterationCount: "infinite",
-    timingFunction: "linear",
-  })
-
   return (
-    <Box className="text-lg h-20 md:h-40" p="md" rounded="md" bg="primary" color="white" animation={animation}>
-      <Heading size="xl">HackSched</Heading>
+    <Box className="sticky top-0 items-center w-screen flex justify-between h-30 backdrop-blur-2xl" p="5" rounded="md" color="black">
+      <LinkBox className="flex justify-center items-center">
+        <LinkOverlay href="/">
+          <Image id="logo" src={image} 
+            className="size-24 p-2 max-sm:hidden" alt="hack sched" />
+        </LinkOverlay>
+        <Heading size="xl">HackSched</Heading>
+      </LinkBox>
+      <nav>
+        <MButton />
+        <AuthButton />
+      </nav>
     </Box>
   );
 }

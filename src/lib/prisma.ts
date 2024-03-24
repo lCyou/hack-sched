@@ -7,7 +7,9 @@ const globalForPrisma = global as unknown as {
 };
 
 if (!globalForPrisma.db) {
-  globalForPrisma.db = new PrismaClient();
+  globalForPrisma.db = new PrismaClient({
+    log: ['query', 'info', 'warn', 'error'],
+  });
 }
 db = globalForPrisma.db;
 

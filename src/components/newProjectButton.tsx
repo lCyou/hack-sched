@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <Motion whileHover={{ scale: 1.1 }}>
-      <Link href="new_project" className="no-underline">
+      <Link href="(service)/new_project" className="no-underline">
         <Box className="grow text-lg md:flex-none md:justify-start mr-4 md:mr-0 md:p-2 md:px-3 md:mb-1" p="md" rounded="md" bg="primary" color="white" animation={animation}>
           New Project
         </Box>

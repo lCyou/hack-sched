@@ -27,9 +27,10 @@ model User {
 model Project {
   id    Int    @id @default(autoincrement())
   title String
+  // repo url
 
   duration_start DateTime
-  duration_end   DateTime
+  duration_end   DateTime 
   total_hours    Int
   users          ProjectOnUser[]
 }
@@ -43,6 +44,8 @@ model ProjectOnUser {
   assignedAt DateTime @default(now())
   assignedBy String
   timeStates TimeState[]
+
+  @@index([projectId, userId])
 }
 
 model TimeState {
@@ -51,5 +54,7 @@ model TimeState {
   status     String
   createdAt  DateTime @default(now())
   userproject   ProjectOnUser @relation(fields: [projectOnUserId], references: [id])
-  projectOnUserId  Int
+  projectOnUserId  Int 
+
+  @@index([projectOnUserId]) 
 }
