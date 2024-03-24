@@ -13,7 +13,7 @@ import {
   FormControl,
 } from "@yamada-ui/react";
 
-export default function Page() {
+const NewProject = () => {
   const [projectName, setProjectName] = useState('');
   const [calendarValue, setCalendarValue] = useState<Date[]>();
   const [totalTime, setTotalTime] = useState<number>();
@@ -27,16 +27,37 @@ export default function Page() {
   };
 
   const handleSubmit = () => {
+    if (projectName === '' || calendarValue === undefined || totalTime === undefined) {
+      console.log('error: input is empty')
+      return;
+    }
     const data = {
-      projectName,
-      calendarValue,
-      totalTime
+      id: 0,
+      title: projectName,
+      duration_start: calendarValue[0],
+      duration_end: calendarValue[1],
+      total_hours: totalTime
     }
     console.log(data);
+    fetch('/api/project', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(res => {
+      if (res.ok) {
+        console.log('success');
+      } else {
+        console.log(res);
+      }
+    }).catch(err => {
+      console.log(err);
+    });
   };
 
   return (
-    <Card className="max-w-xl mx-auto mt-10 overflow-hidden">
+    <Card className="max-w-xl mx-auto mt-10 ">
       <CardHeader bgGradient="linear(to-l, #7928CA, #FF0080)" className="bg-blue-500 px-5 py-4">
         <Heading  className="text-white">新規プロジェクトの作成</Heading>
       </CardHeader>
@@ -82,3 +103,5 @@ export default function Page() {
     </Card>
   );
 }
+
+export default NewProject;
