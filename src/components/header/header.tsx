@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { Box, Heading, LinkBox, LinkOverlay} from "@yamada-ui/react";
 import image from "@/../public/logo.png";
-import AuthButton from "@/components/authButton";
-import MButton from "@/components/menuButton";
+import AuthButton from "@/components/header/authButton";
+import MButton from "@/components/header/menuButton";
 
 const Header = () => {
   return (
