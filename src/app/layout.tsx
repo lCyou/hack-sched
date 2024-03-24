@@ -4,7 +4,6 @@ import "./globals.css";
 import Providers from "@/app/providers";
 import React from "react";
 import dynamic from "next/dynamic";
-import Header from "@/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,15 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} flex flex-col`}>
-        <Providers>
-        <ColorMode/>
-        {/* <header className=''> */}
-          <Header />
-        {/* </header> */}
-        <main className=''>
-          {children}
-        </main>
-        </Providers>
+        {/* <Providers> */}
+        {/* <ColorMode/> */}
+        {children}
+        {/* </Providers> */}
       </body>
     </html>
   );
