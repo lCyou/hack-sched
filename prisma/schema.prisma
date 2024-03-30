@@ -9,8 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
@@ -19,6 +19,7 @@ model User {
   name      String          @unique
   email     String?
   password  String?
+  image     String?         @db.Text
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
   projects  ProjectOnUser[]
@@ -29,19 +30,19 @@ model Project {
   title String
   // repo url
 
-  duration_start DateTime
-  duration_end   DateTime 
+  duration_start DateTime        @db.Timetz()
+  duration_end   DateTime        @db.Timetz()
   total_hours    Int
   users          ProjectOnUser[]
 }
 
 model ProjectOnUser {
-  id         Int      @id @default(autoincrement())
-  project    Project  @relation(fields: [projectId], references: [id])
-  projectId  Int 
-  user       User     @relation(fields: [userId], references: [id])
+  id         Int         @id @default(autoincrement())
+  project    Project     @relation(fields: [projectId], references: [id])
+  projectId  Int
+  user       User        @relation(fields: [userId], references: [id])
   userId     Int
-  assignedAt DateTime @default(now())
+  assignedAt DateTime    @default(now()) @db.Timestamptz()
   assignedBy String
   timeStates TimeState[]
 
@@ -49,12 +50,12 @@ model ProjectOnUser {
 }
 
 model TimeState {
-  id         Int      @id @default(autoincrement())
-  time_start DateTime // ここから1時間のみ
-  status     String
-  createdAt  DateTime @default(now())
-  userproject   ProjectOnUser @relation(fields: [projectOnUserId], references: [id])
-  projectOnUserId  Int 
+  id              Int           @id @default(autoincrement())
+  time_start      DateTime      @db.Timetz() // ここから1時間のみ
+  status          String
+  createdAt       DateTime      @default(now()) @db.Timestamptz()
+  userproject     ProjectOnUser @relation(fields: [projectOnUserId], references: [id])
+  projectOnUserId Int
 
-  @@index([projectOnUserId]) 
+  @@index([projectOnUserId])
 }

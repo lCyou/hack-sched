@@ -6,6 +6,9 @@ export type SessionUser = Pick<User, "name">;
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
-    user: SessionUser;
+    user:  {
+      name: string;
+      image: string;
+    };
   }
 }

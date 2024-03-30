@@ -1,10 +1,23 @@
 
-const userPage = () => {
+import { Suspense } from 'react';
+// import Loading from '@/components/loading';
+import ProjectList from '@/components/projectList';
+import UserStatus from '@/components/userStatus';
+
+
+
+const UserPage = () => {
     return (
-        <div>
-        <h1>User Page</h1>
-        </div>
+        <>
+        {/* <Button onClick={() => signIn()} /> */}
+        <UserStatus/>
+        <Suspense 
+        // fallback={<Loading/>}
+        >
+            <ProjectList/>
+        </Suspense>
+        </>
     );
 };
 
-export default userPage;
+export default UserPage;
