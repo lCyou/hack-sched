@@ -31,11 +31,14 @@ const data = [
     duration_end: "2024/02/06",
   },
 ]; 
+
 // fetch("https://jsonplaceholder.typicode.com/posts").catch((error) => {
 //   console.error("Error:", error);
 // })
 
 const ProjectList = () => {
+  let pagesize = 10;
+
   const columns = useMemo<Column<Data>[]>(
     () => [
       {
@@ -55,7 +58,13 @@ const ProjectList = () => {
   )
     return (
         <>
-          <PagingTable columns={columns} data={data} />
+          <PagingTable size="lg" 
+          defaultPageSize={10} 
+          pageSizeList={[10, 20]}
+          onChangePageSize={(pageSize) => {
+            pagesize = pageSize;
+          }}
+          columns={columns} data={data} />
         </>
     );
 };
