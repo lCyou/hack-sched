@@ -422,31 +422,19 @@
   dependencies:
     tslib "^2.4.0"
 
-"@tanstack/react-table@^8.15.3":
+"@tanstack/react-table@^8.15.3", "@tanstack/react-table@^8.9.1":
   version "8.15.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-table/-/react-table-8.15.3.tgz#9933222642d5d5bdaea5a78cf6c5d42aa86a1c22"
+  resolved "https://registry.npmjs.org/@tanstack/react-table/-/react-table-8.15.3.tgz"
   integrity sha512-aocQ4WpWiAh7R+yxNp+DGQYXeVACh5lv2kk96DjYgFiHDCB0cOFoYMT/pM6eDOzeMXR9AvPoLeumTgq8/0qX+w==
   dependencies:
     "@tanstack/table-core" "8.15.3"
 
-"@tanstack/react-table@^8.9.1":
-  version "8.13.2"
-  resolved "https://registry.npmjs.org/@tanstack/react-table/-/react-table-8.13.2.tgz"
-  integrity sha512-b6mR3mYkjRtJ443QZh9sc7CvGTce81J35F/XMr0OoWbx0KIM7TTTdyNP2XKObvkLpYnLpCrYDwI3CZnLezWvpg==
-  dependencies:
-    "@tanstack/table-core" "8.13.2"
-
-"@tanstack/table-core@8.13.2":
-  version "8.13.2"
-  resolved "https://registry.npmjs.org/@tanstack/table-core/-/table-core-8.13.2.tgz"
-  integrity sha512-/2saD1lWBUV6/uNAwrsg2tw58uvMJ07bO2F1IWMxjFRkJiXKQRuc3Oq2aufeobD3873+4oIM/DRySIw7+QsPPw==
-
 "@tanstack/table-core@8.15.3":
   version "8.15.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/table-core/-/table-core-8.15.3.tgz#1a11cef82a458e90694bedfb40dcff610e69460e"
+  resolved "https://registry.npmjs.org/@tanstack/table-core/-/table-core-8.15.3.tgz"
   integrity sha512-wOgV0HfEvuMOv8RlqdR9MdNNqq0uyvQtP39QOvGlggHvIObOE4exS+D5LGO8LZ3LUXxId2IlUKcHDHaGujWhUg==
 
-"@types/estree@1.0.5", "@types/estree@^1.0.0":
+"@types/estree@^1.0.0", "@types/estree@1.0.5":
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.5.tgz"
   integrity sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==
@@ -727,7 +715,7 @@
 
 "@yamada-ui/checkbox@1.0.21":
   version "1.0.21"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/checkbox/-/checkbox-1.0.21.tgz#55f8535b12eff1b7c79d417489358828638350b8"
+  resolved "https://registry.npmjs.org/@yamada-ui/checkbox/-/checkbox-1.0.21.tgz"
   integrity sha512-88yvl8zgg/O2Vq/MABdn3i6n/0V4RYGnhRn/uqhBoMdiZzG13jEgK3H1ndxKVG0B3VSATr/UW7IHLwhah3wB/w==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -750,7 +738,7 @@
 
 "@yamada-ui/close-button@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/close-button/-/close-button-1.0.18.tgz#0a78831561e80b7d12352b4bf7fa388184fce030"
+  resolved "https://registry.npmjs.org/@yamada-ui/close-button/-/close-button-1.0.18.tgz"
   integrity sha512-Ggo3o+idsIarxNFx0Jml85PQIfEMo+/+gBcnMjFdOmlpSZKXbPYQa4GGOTJTNxzxl5657oR6je1rk1Nw/r7Ivw==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -795,7 +783,7 @@
 
 "@yamada-ui/core@1.5.0":
   version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/core/-/core-1.5.0.tgz#4dc1b7075be10c3fc4684a6a3228f68813a72a27"
+  resolved "https://registry.npmjs.org/@yamada-ui/core/-/core-1.5.0.tgz"
   integrity sha512-iIgPGt6hjQfGCJw8AdV8rOdkPNCXqMKud7icqZml3CkI8nKTGz23E+TFVnaGBFns4yc5Lnle22XgXE5abEwsgw==
   dependencies:
     "@emotion/css" "^11.11.0"
@@ -856,7 +844,7 @@
 
 "@yamada-ui/form-control@1.0.20":
   version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/form-control/-/form-control-1.0.20.tgz#91dda9578f41f8c644535e4dff736f7ec9190ac6"
+  resolved "https://registry.npmjs.org/@yamada-ui/form-control/-/form-control-1.0.20.tgz"
   integrity sha512-z6BwkLhtQHU7WGG+NQRbCblSri9bxarAX3pGs4y35G3n5Q3wmPU7+v0/hHwgdc0k5dAMJPoapqhGqReOW/7R1A==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -882,7 +870,7 @@
 
 "@yamada-ui/icon@1.0.17":
   version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/icon/-/icon-1.0.17.tgz#8900b91a0c8ee91d16619436766faa642c506a76"
+  resolved "https://registry.npmjs.org/@yamada-ui/icon/-/icon-1.0.17.tgz"
   integrity sha512-JZHAFx6ON3XrgRbXDXizQ5JYNYT9Pob0rNG/kYi0FHSGAwu9lCWDVz4wlmazZRMt4jdi2IOpBNHJl8uCUAHFOA==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -936,7 +924,7 @@
 
 "@yamada-ui/layouts@1.1.14":
   version "1.1.14"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/layouts/-/layouts-1.1.14.tgz#474567d305124d1d6a8006ab28eb4f5cf763165f"
+  resolved "https://registry.npmjs.org/@yamada-ui/layouts/-/layouts-1.1.14.tgz"
   integrity sha512-a1ZFoFurOzwINj5S01XyfplpMuuygnG6wN2rktc64d5SBdPXl7MQPuDamjdt5v0UHcOG5koDCcvy9s3udqEIjg==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1016,7 +1004,7 @@
 
 "@yamada-ui/motion@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/motion/-/motion-1.0.18.tgz#ffc1af4f7a659ef84adb549f7e2278c5064f5eae"
+  resolved "https://registry.npmjs.org/@yamada-ui/motion/-/motion-1.0.18.tgz"
   integrity sha512-uw0U92rTGOx9BImS/YkTTZQGfSEBW8geB1liKtju5KtU6LMGRPb8a8/d5UGkPFYRowk+7HU1E7hEVsoe2EAzcA==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1043,7 +1031,7 @@
 
 "@yamada-ui/native-table@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/native-table/-/native-table-1.0.18.tgz#b36e21418f0a9b0584d0af40331670f9066ab152"
+  resolved "https://registry.npmjs.org/@yamada-ui/native-table/-/native-table-1.0.18.tgz"
   integrity sha512-pWCtsLMLBooP+FOKsmXToYiRI7BlX5MKoI4THpUuy9r3D7FXlm4Mw6gNfWXmiSuV6Ujf0W7sIoOQjVDTPnhD9Q==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1089,7 +1077,7 @@
 
 "@yamada-ui/pagination@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/pagination/-/pagination-1.0.18.tgz#90e6481c913a072f10e2e618268390cc42ebf279"
+  resolved "https://registry.npmjs.org/@yamada-ui/pagination/-/pagination-1.0.18.tgz"
   integrity sha512-jr5CMTF6Dx/O4fsfRpq7zvmsK7JNtTsQ0vrP/a8GCWSx9pn7EEU4kpEylTh/jCdOlHWpdnK/vdUs5Y/Pdvo+tg==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1127,7 +1115,7 @@
 
 "@yamada-ui/popover@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/popover/-/popover-1.0.18.tgz#eb18198a950c80996ee97b04b167fb1fa0bac670"
+  resolved "https://registry.npmjs.org/@yamada-ui/popover/-/popover-1.0.18.tgz"
   integrity sha512-tlflfirr8Wevjjzrc5wR97o1C3Qj2WAX/5oExDj85QF3RLnMuSzUYRK6OUXATFgGqXOJMQbvzAnM3lnioCLeFQ==
   dependencies:
     "@yamada-ui/close-button" "1.0.18"
@@ -1149,7 +1137,7 @@
 
 "@yamada-ui/portal@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/portal/-/portal-1.0.8.tgz#8cd24ae6b3ab81a4fd16f417831d93f4af289b1a"
+  resolved "https://registry.npmjs.org/@yamada-ui/portal/-/portal-1.0.8.tgz"
   integrity sha512-947CjZqYJF2VSHVg9Ix7gGiUlaqr1Y7apDR5xiAXBRqhbYMw8vjPFbkZDRyWihFRfUOX97JlaE4mkjheHK5AHw==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
@@ -1332,7 +1320,7 @@
 
 "@yamada-ui/ripple@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/ripple/-/ripple-1.0.18.tgz#c92203e367d72a3b059586a2eabf0db52542b002"
+  resolved "https://registry.npmjs.org/@yamada-ui/ripple/-/ripple-1.0.18.tgz"
   integrity sha512-jR2KCfZXa7mY67bmPfOYQp78YBwbEqhfpZhXI82g0dt8oeLkywhgkBtXyKQ6vU3J+FfKVGXirDkwTYxO79FE2Q==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1379,7 +1367,7 @@
 
 "@yamada-ui/select@1.2.3":
   version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/select/-/select-1.2.3.tgz#5caf744feb47499a0dbea3e9142b6aa33e163f82"
+  resolved "https://registry.npmjs.org/@yamada-ui/select/-/select-1.2.3.tgz"
   integrity sha512-ZgAxkRtczHN1OehuK7A8I+a8NnHAXU6OmUNcxavrCfWZK2OjTut/IUUWj475LZYh1VCMXTr9KqTBye9kKdH0rQ==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1464,7 +1452,7 @@
 
 "@yamada-ui/table@^1.0.22":
   version "1.0.22"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/table/-/table-1.0.22.tgz#db793618b5d0cca1e8182ee02f9d54378422f287"
+  resolved "https://registry.npmjs.org/@yamada-ui/table/-/table-1.0.22.tgz"
   integrity sha512-kvWA2HlSpwUw2C5L7G3L+nMMleufosY6+VlkS4MMzAkzgxJA9pwq8R66MrG/+GaLmvYjFv9ku0pYzn55pH9MkQ==
   dependencies:
     "@tanstack/react-table" "^8.9.1"
@@ -1552,7 +1540,7 @@
 
 "@yamada-ui/transitions@1.0.18":
   version "1.0.18"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/transitions/-/transitions-1.0.18.tgz#1932e916ee92064efe7e1444cf14f9367311e830"
+  resolved "https://registry.npmjs.org/@yamada-ui/transitions/-/transitions-1.0.18.tgz"
   integrity sha512-+TtuCDVBNZT29qJ9hqSHjKisfKZ/bxbU4IdRxZ/2avOIQ5e+evESwSJkH+8csSQDY9wlXyd4LrVkNaAbdYd5FQ==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1581,7 +1569,7 @@
 
 "@yamada-ui/use-animation@1.0.17":
   version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-animation/-/use-animation-1.0.17.tgz#1e7fb8207d186c7c630e567cedc3b9bd13cd5166"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-animation/-/use-animation-1.0.17.tgz"
   integrity sha512-yCiAhRGDkc2WARU/iIAynnoAWFE68BZRH6m5Clfbc8COltpEcq9K7ADXArk0sVYAwWhJIXkkeDUabAU6auQzHA==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1597,7 +1585,7 @@
 
 "@yamada-ui/use-boolean@1.0.1":
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-boolean/-/use-boolean-1.0.1.tgz#2cb63e34f4cbf33a8940ed121ada3711b21e757b"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-boolean/-/use-boolean-1.0.1.tgz"
   integrity sha512-fWPJyVRMyh5hKySXvJapUyr8GSRjXfZDYg2IaRGChhxpukIrxGDCxmxmndclzjG6oCWfwR/XVLFTWe1HtA3tBw==
 
 "@yamada-ui/use-breakpoint@1.2.2":
@@ -1610,7 +1598,7 @@
 
 "@yamada-ui/use-breakpoint@1.2.5":
   version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-breakpoint/-/use-breakpoint-1.2.5.tgz#12163fcf8f97049ce8ad97e6adfb98922dbd4a81"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-breakpoint/-/use-breakpoint-1.2.5.tgz"
   integrity sha512-04I3sLnObgIPA0T4jKixaf17TIVBCN/HYihaaj9u96idmNuZ20ZP+ZyaPkt5inDw87LlBX6AI1yte1fWTaTCSw==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1626,7 +1614,7 @@
 
 "@yamada-ui/use-clickable@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-clickable/-/use-clickable-1.0.8.tgz#863f6044123bfdd84cb1ff8a6ee22cb42d2f1eb1"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-clickable/-/use-clickable-1.0.8.tgz"
   integrity sha512-I4knWiqc8uE3rcpUhp/JAHgIkcxxkP8SQnJoOlZMjgkIZgcvwgCQiLmjICujE0mQ0vdWo0D5gxSxdradRG17VA==
   dependencies:
     "@yamada-ui/use-event-listener" "1.0.8"
@@ -1649,7 +1637,7 @@
 
 "@yamada-ui/use-controllable-state@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-controllable-state/-/use-controllable-state-1.0.8.tgz#705eb6b90d185daa489c1d11794f01ba41413585"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-controllable-state/-/use-controllable-state-1.0.8.tgz"
   integrity sha512-jfXVPkFwWi8JH07HnsRKbau1/CqvLYboE+Sh5y7aXoR+EPKgtucwfaURd/DkdGiCMZcW/eyLKyNCsLG9zrSjLw==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
@@ -1670,7 +1658,7 @@
 
 "@yamada-ui/use-descendant@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-descendant/-/use-descendant-1.0.8.tgz#2329f4aa5016784833f3ade2679c4962dfc8bf55"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-descendant/-/use-descendant-1.0.8.tgz"
   integrity sha512-SqKRDR5M3V/Fo4V5YLc23qcaKaWhJBqjjkNPtnwUoFZSE5QSM46thWyoX0aos7/qVP3NA1oK1D3e1tMFqaMy/w==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
@@ -1684,7 +1672,7 @@
 
 "@yamada-ui/use-disclosure@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-disclosure/-/use-disclosure-1.0.8.tgz#05316c85a3a17eee892c681e34ed31b56085c989"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-disclosure/-/use-disclosure-1.0.8.tgz"
   integrity sha512-Gs6XU40XICyLtP7hGjx3Mm9E9oYlffuMHh3yozORDxJXvpGQzdTtn445PxI9/6JepDS7nW0DsO5v8TXrdZGX0A==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
@@ -1698,12 +1686,12 @@
 
 "@yamada-ui/use-event-listener@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-event-listener/-/use-event-listener-1.0.8.tgz#51b4bb18deba73554eeee8d9073b683c5854e921"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-event-listener/-/use-event-listener-1.0.8.tgz"
   integrity sha512-mKF+Xw2iAI7kjNua0gKcfUeMa6VN6xZbKAdodzGrLB72M9GGDJmN7xR8eZXx/HwCeihfnnM8cNBmZOWrC9/YaA==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
 
-"@yamada-ui/use-eye-dropper@1.0.3", "@yamada-ui/use-eye-dropper@^1.0.3":
+"@yamada-ui/use-eye-dropper@^1.0.3", "@yamada-ui/use-eye-dropper@1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@yamada-ui/use-eye-dropper/-/use-eye-dropper-1.0.3.tgz"
   integrity sha512-sQI9pbrRcF/BCv4K5zv43ukUzIERuVP1NxGtKqYE3b+j68gHTICQZzWbiGdDQH9rZm5ED8N8PfYjoAzmvjj5iw==
@@ -1719,7 +1707,7 @@
 
 "@yamada-ui/use-focus-visible@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-focus-visible/-/use-focus-visible-1.0.8.tgz#7934da70ff67989a526583c5e878a6ce2d880711"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-focus-visible/-/use-focus-visible-1.0.8.tgz"
   integrity sha512-Jd9SMjNrEi+nJNoX5ZsjRg8TyGgwizKpuovhLfJW7qYSQsPJfDlI60oKHiUE8OSOr+bPHlCC7DTt0CPwAyHZxg==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
@@ -1734,7 +1722,7 @@
 
 "@yamada-ui/use-focus@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-focus/-/use-focus-1.0.8.tgz#46715a2d5d99b61f85fd83eb424fd7b0ec85ba15"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-focus/-/use-focus-1.0.8.tgz"
   integrity sha512-uFk98vg4qsPcpHVjKSYufdg5dobZLt/m7Re24lNTs8bBJCnnnSvTIy3ZgrAXcXXOvwgbwerwjW6Wt4WZ5VYxYQ==
   dependencies:
     "@yamada-ui/use-event-listener" "1.0.8"
@@ -1798,12 +1786,12 @@
 
 "@yamada-ui/use-outside-click@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-outside-click/-/use-outside-click-1.0.8.tgz#01e8c5735a9375c3f254af3badf29964d1c1b9ff"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-outside-click/-/use-outside-click-1.0.8.tgz"
   integrity sha512-8aJGkYBXmGuP1FdBsIidtM/RSgMWearkoE8sdWXjBFXxyDkDaitdGPYA2APeP/N5ywHQbMg5qjfcz1uvTvF1ww==
   dependencies:
     "@yamada-ui/utils" "1.0.8"
 
-"@yamada-ui/use-pan-event@1.0.6", "@yamada-ui/use-pan-event@^1.0.6":
+"@yamada-ui/use-pan-event@^1.0.6", "@yamada-ui/use-pan-event@1.0.6":
   version "1.0.6"
   resolved "https://registry.npmjs.org/@yamada-ui/use-pan-event/-/use-pan-event-1.0.6.tgz"
   integrity sha512-wG4k4eycJU9uLMloMK42ZZNaikMTodwd3fFI0lFZegWiofWL3A9P0kT8UawI58lnj/9s4GNoTKFtpqwsD5ttnA==
@@ -1824,7 +1812,7 @@
 
 "@yamada-ui/use-popper@1.0.17":
   version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-popper/-/use-popper-1.0.17.tgz#cbc575eff0fee472a449f88fde54eac7b634d6bd"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-popper/-/use-popper-1.0.17.tgz"
   integrity sha512-+ZabE5Dy3Nvtb0O7zzTc90bzybHTxVqWhyDt+SgRnM4xvpk4zgfrRDNEtdnF751Ai5d98kIwR6wfqu0XWs9clg==
   dependencies:
     "@popperjs/core" "^2.11.8"
@@ -1870,7 +1858,7 @@
 
 "@yamada-ui/use-token@1.1.5":
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-token/-/use-token-1.1.5.tgz#0dffcc6a482c690fb86789b6d40175231956ea15"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-token/-/use-token-1.1.5.tgz"
   integrity sha512-MXm+6DNTtbB8img5R/A3X4e7i1O7AZY6QjO2+mVProY02VOl9sMtGDK1Wwu66A/vSgdZ2oBEni/p8Am/rI20zQ==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1887,7 +1875,7 @@
 
 "@yamada-ui/use-value@1.1.5":
   version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/use-value/-/use-value-1.1.5.tgz#65a568a11e27175b62a5594bfd642ceff5671e0c"
+  resolved "https://registry.npmjs.org/@yamada-ui/use-value/-/use-value-1.1.5.tgz"
   integrity sha512-vlQqYrTFQ5ayXNjc+MezRVmxTBfTQzqMK72PVZRRQPEbq1fOurLtlpMJNFezWEPjiFt+NUo1AKsiQlie3BkNew==
   dependencies:
     "@yamada-ui/core" "1.5.0"
@@ -1910,7 +1898,7 @@
 
 "@yamada-ui/utils@1.0.8":
   version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@yamada-ui/utils/-/utils-1.0.8.tgz#ef7b4549c2ca24621077b84577ec6f13e8ba3bfa"
+  resolved "https://registry.npmjs.org/@yamada-ui/utils/-/utils-1.0.8.tgz"
   integrity sha512-uENcCJay39iXraJSLStRCL6YFPZ5eTFanOHUPslTTbRpdLI2SYp0zXdro1JwELhvgOlg7ZaL903DS3aN7xcHCw==
   dependencies:
     color2k "^2.0.2"
@@ -4754,8 +4742,16 @@ streamsearch@^1.1.0:
   resolved "https://registry.npmjs.org/streamsearch/-/streamsearch-1.1.0.tgz"
   integrity sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
-  name string-width-cjs
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^4.1.0:
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
