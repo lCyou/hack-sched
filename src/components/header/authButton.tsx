@@ -12,7 +12,7 @@ const AuthButton = () => {
       onClick={() => {
         session ? signOut(): signIn();
       }}>
-        {session ? 'Logout' : 'Login'}
+        log out
     </Button>
   );
 }
