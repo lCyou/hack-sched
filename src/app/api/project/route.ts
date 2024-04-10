@@ -6,6 +6,7 @@ import { extractBody } from "@/lib/extractBody";
 import db from '@/lib/prisma';
 
 // プロジェクトの一覧が取得できる
+// 未参加のプロジェクトも取得できてしまう
 export async function GET() : Promise<Response>{
     const projects = await db.project.findMany();
     return new Response(JSON.stringify(projects), { status: 200 });

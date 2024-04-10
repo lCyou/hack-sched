@@ -35,18 +35,23 @@ export const options: NextAuthOptions = {
         ...session,
         user: {
           name: session.user.name,
+          image: session.user.image,
         },
       };
     },
     signIn: async ({ user }) => {
       console.log("user", user);
-      const { name } = user;
+      const { name, image } = user;
       if (!name) throw new Error("ユーザー名がありません");
 
       try {
         const dbUser = await db.user.findUnique({ where: { name } });
         if (!dbUser) {
-          await db.user.create({ data: { name } });
+          await db.user.create({ data: { 
+            id: 0,
+            name: name, 
+            image: image
+           } });
         }
       } catch (err) {
         console.error(err);

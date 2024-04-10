@@ -25,6 +25,7 @@ export async function GET(): Promise<NextResponse<Omit<User, "password">> | Resp
     id: 1,
     email: "dummyyyyy@huga.com",
     name: "dummy",
+    image : "null",
     createdAt: new Date("1970/1/1"),
     updatedAt: new Date("1970/1/1"),
   };

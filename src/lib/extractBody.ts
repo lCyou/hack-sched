@@ -8,7 +8,7 @@ export async function extractBody<T extends z.ZodSchema>(
 ): Promise<z.infer<typeof schema> | NextResponse<Response>> {
   try {
     const requestBody = await req.body!.getReader().read();
-
+    
     const decoder = new TextDecoder();
     const decodedBody = decoder.decode(requestBody.value);
     const JSONBody = JSON.parse(decodedBody);

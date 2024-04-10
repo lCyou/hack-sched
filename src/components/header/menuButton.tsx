@@ -23,9 +23,16 @@ const MButton = () => {
                         <p>Create New</p>
                     </Link>
                 </MenuItem>
+
                 <MenuItem >
-                    <Link href="/user" className=" w-full h-full">
+                    <Link href="/projects" className=" w-full h-full">
                         Your Projects
+                    </Link>
+                </MenuItem>
+
+                <MenuItem >
+                    <Link href="/test" className=" w-full h-full">
+                        test
                     </Link>
                 </MenuItem>
             </MenuList>
