@@ -18,7 +18,9 @@ export const customConfig = extendConfig(config);
 const Providers: React.FC<Props> = ({ children: chlidren }) => {
   return (
     <UIProvider config={customConfig}>
-      <SessionProvider>{chlidren}</SessionProvider>
+      <SessionProvider>
+        {chlidren}
+        </SessionProvider>
     </UIProvider>
   );
 };
