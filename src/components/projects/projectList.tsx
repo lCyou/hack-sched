@@ -37,25 +37,28 @@ const data = [
   },
 ]; 
 
-type Data = {
-  id: number,
-  title: string,
-  duration_start: string,
-  duration_end: string,
-}
+// type Data = {
+//   id: number,
+//   title: string,
+//   duration_start: string,
+//   duration_end: string,
+// }
 
-async function Data(user: any) : Promise<Data[]| undefined>{
-  try {
-    const res = await fetch(`/api/user/${user.user.name}`)
-    const body = await res.json();
-    const resd = await fetch(`/api/projectOnUser/${body.id}`);
-    const data = await resd.json();
-    console.log('complete');
-    return data;
-  }catch(e) {
-    console.error(e);
-  }
-}
+// async function Data(user: any) : Promise<Data[]| undefined>{
+//   try {
+//     const res = await fetch(`/api/user/${user.user.name}`)
+//     const body = await res.json();
+//     const resd = await fetch(`/api/projectOnUser/${body.id}`);
+//     const data = await resd.json();
+//     console.log('complete');
+//     return data;
+//   }catch(e) {
+//     console.error(e);
+//   }
+// }
+const formatDate = new Intl.DateTimeFormat('ja-JP', {
+  year: 'numeric', month: 'numeric', day: 'numeric'
+}).format;
 
 const fetchProjects = async (user: any) => {
   const res = await fetch(`/api/user/${user.user.name}`)
@@ -71,7 +74,7 @@ const fetchProjects = async (user: any) => {
                     <Heading size="md">{title}</Heading>
                 </CardHeader>
                 <CardBody>
-                    <p>Duration: {duration_start} - {duration_end}</p>
+                    <p>Duration: {formatDate(new Date(duration_start))} - {formatDate(new Date(duration_end))}</p>
                     <Link href={`/dashboard/${id}`}>
                         <Button colorScheme="primary" className="flex justify-end">View</Button>
                     </Link>
