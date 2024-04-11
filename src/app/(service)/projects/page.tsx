@@ -1,11 +1,10 @@
 'use client'
 import { Suspense } from 'react';
 // import Loading from '@/components/loading';
-import ProjectList from '@/components/projectList';
-import UserStatus from '@/components/userStatus';
+import ProjectList from '@/components/projects/projectList';
+import UserStatus from '@/components/projects/userStatus';
+import PageLoading from '@/components/loading';
 import { useSession } from "next-auth/react"
-
-
 
 const UserPage = () => {
     const { data :session, status } = useSession();
@@ -15,14 +14,18 @@ const UserPage = () => {
             {/* <Button onClick={() => signIn()} /> */}
             <UserStatus user={session}/>
             <Suspense 
-            // fallback={<Loading/>}
+            fallback={<PageLoading/>}
             >
-                <ProjectList/>
+                <ProjectList user={session}/>
             </Suspense>
             </>
         );
     }
-    return (<div>Loading...</div>);
+    return (
+        <>
+            <PageLoading />
+        </>
+    );
 };
 
 export default UserPage;

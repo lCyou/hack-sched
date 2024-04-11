@@ -2,7 +2,6 @@
 import { Avatar, AvatarBadge } from "@yamada-ui/react"
 
 const UserStatus = ({user}: {user: any}) => {
-    console.log(user.user.id);
     return (
         <div className="flex justify-center pb-9">
             <Avatar

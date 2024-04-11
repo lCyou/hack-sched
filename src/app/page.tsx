@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
           <div className="w-full flex items-center justify-center p-10">
             <LinkBox className="mt-5 rounded-xl bg-white">
-              <LinkOverlay href="/user">
+              <LinkOverlay href="/projects">
                 <h1 className="text-black font-semibold text-lg py-4 px-6">Get Started</h1>
               </LinkOverlay>
             </LinkBox>

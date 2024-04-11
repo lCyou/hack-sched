@@ -17,6 +17,7 @@
     "@vercel/postgres": "^0.7.2",
     "@yamada-ui/calendar": "^1.1.9",
     "@yamada-ui/react": "^1.2.6",
+    "@yamada-ui/select": "^1.2.4",
     "@yamada-ui/table": "^1.0.22",
     "next": "14.1.0",
     "next-auth": "^4.24.6",
