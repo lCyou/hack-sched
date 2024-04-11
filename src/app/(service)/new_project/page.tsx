@@ -34,8 +34,8 @@ const NewProject = () => {
     const data = {
       id: 0,
       title: projectName,
-      duration_start: calendarValue[0],
-      duration_end: calendarValue[1],
+      duration_start: calendarValue[0].toISOString(),
+      duration_end: calendarValue[1].toISOString(),
       total_hours: totalTime
     }
     console.log(data);
