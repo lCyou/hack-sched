@@ -1,4 +1,5 @@
 'use client';
+import link from 'next/link';
 import { useState } from "react";
 import { Calendar } from "@yamada-ui/calendar";
 import { 
@@ -38,7 +39,6 @@ const NewProject = () => {
       duration_end: calendarValue[1].toISOString(),
       total_hours: totalTime
     }
-    console.log(data);
     fetch('/api/project', {
       method: 'POST',
       headers: {
@@ -48,6 +48,9 @@ const NewProject = () => {
     }).then(res => {
       if (res.ok) {
         console.log('success');
+        // project on user レコードを作成しないと作成者が参加できない
+
+        window.location.replace('/projects');
       } else {
         console.log(res);
       }

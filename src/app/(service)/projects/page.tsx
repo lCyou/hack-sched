@@ -8,7 +8,7 @@ import { useSession } from "next-auth/react"
 
 const UserPage = () => {
     const { data :session, status } = useSession();
-    if (status === 'authenticated' && session) {
+    if (status === 'authenticated') {
         return (
             <>
             {/* <Button onClick={() => signIn()} /> */}

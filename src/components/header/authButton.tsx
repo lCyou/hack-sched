@@ -1,16 +1,16 @@
 'use client';
-import { signIn, signOut, useSession } from "next-auth/react";
-import { Loading } from "@yamada-ui/react";
+import { signOut} from "next-auth/react";
 import { Button } from "@yamada-ui/react";
-import { useEffect } from "react";
 
 const AuthButton = () => {
-  const { data: session } = useSession();
-
+  function handleSignOut() {
+    signOut();
+    window.location.href = '/';
+  }
   return (
     <Button className='m-2 xl:mr-2' loadingIcon="dots"
       onClick={() => {
-        session ? signOut(): signIn();
+        handleSignOut()
       }}>
         log out
     </Button>

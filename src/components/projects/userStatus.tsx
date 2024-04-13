@@ -1,7 +1,8 @@
 'use client'
+import { memo } from 'react';
 import { Avatar, AvatarBadge } from "@yamada-ui/react"
 
-const UserStatus = ({user}: {user: any}) => {
+const UserStatus = memo(({user}: {user: any}) => {
     return (
         <div className="flex justify-center pb-9">
             <Avatar
@@ -13,6 +14,8 @@ const UserStatus = ({user}: {user: any}) => {
 
         </div>
     );
-}
+})
+
+UserStatus.displayName = 'UserStatus';
 
 export default UserStatus;
