@@ -39,6 +39,7 @@ const NewProject = () => {
       duration_end: calendarValue[1].toISOString(),
       total_hours: totalTime
     }
+    console.log(data);
     fetch('/api/project', {
       method: 'POST',
       headers: {
@@ -50,7 +51,7 @@ const NewProject = () => {
         console.log('success');
         // project on user レコードを作成しないと作成者が参加できない
 
-        window.location.replace('/projects');
+        // window.location.replace('/projects');
       } else {
         console.log(res);
       }

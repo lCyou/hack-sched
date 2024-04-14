@@ -48,7 +48,6 @@ export const options: NextAuthOptions = {
         const dbUser = await db.user.findUnique({ where: { name } });
         if (!dbUser) {
           await db.user.create({ data: { 
-            id: 0,
             name: name, 
             image: image
            } });
