@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Grid, GridItem, LinkBox, LinkOverlay } from "@yamada-ui/react";
 
+// Landing page
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">

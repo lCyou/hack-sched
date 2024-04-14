@@ -30,8 +30,8 @@ model Project {
   title String
   // repo url
 
-  duration_start DateTime        @db.Timetz()
-  duration_end   DateTime        @db.Timetz()
+  duration_start DateTime        	@db.Timestamptz()
+  duration_end   DateTime        	@db.Timestamptz()
   total_hours    Int
   users          ProjectOnUser[]
 }

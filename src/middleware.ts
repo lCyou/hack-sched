@@ -5,6 +5,6 @@ export const config = {
     // "/((?!register|api|login).*)",
     "/dashboard/:path*",
     "/new_project",
-    "/user/:path*",
+    "/projects/:path*",
   ],
 };

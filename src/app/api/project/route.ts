@@ -18,13 +18,14 @@ export async function POST(req: NextRequest) : Promise<Response> {
     if (project instanceof Response) {
         return project;
     }
+    const data = {
+        title: project.title,
+        duration_start: project.duration_start.toISOString(),
+        duration_end: project.duration_end.toISOString(),
+        total_hours: project.total_hours
+    };
     const newProject = await db.project.create({
-        data: {
-            title: project.title,
-            duration_start: project.duration_start.toISOString(),
-            duration_end: project.duration_end.toISOString(),
-            total_hours: project.total_hours,
-        }
+        data: data
     });
     if(newProject != null){
         return new Response(JSON.stringify(newProject), { status: 200 });

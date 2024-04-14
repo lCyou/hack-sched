@@ -5,7 +5,7 @@ import { Button } from "@yamada-ui/react";
 const AuthButton = () => {
   function handleSignOut() {
     signOut();
-    window.location.href = '/';
+    // window.location.href = '/';
   }
   return (
     <Button className='m-2 xl:mr-2' loadingIcon="dots"
