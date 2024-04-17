@@ -16,7 +16,7 @@ const Header = memo(function Header() {
         </LinkOverlay>
         <Heading size="xl">HackSched</Heading>
       </LinkBox>
-      <nav>
+      <nav className="justify-end">
         <MButton />
         <AuthButton />
       </nav>

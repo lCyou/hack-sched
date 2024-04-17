@@ -10,16 +10,19 @@ const unauthorizedResponse = new Response("Unauthorized", { status: 401 });
 
 export async function GET(): Promise<NextResponse<Omit<User, "password">> | Response> {
   const session = await getServerSession(options);
+  if (!session?.user) {
+    return unauthorizedResponse;
+  }
 
-  if (!session?.user) return unauthorizedResponse;
-
-  // return NextResponse.json(
-  //   await db.user.findUnique({
-  //     where: {
-  //       name: session.user.name,
-  //     },
-  //   })
-  // );
+  return NextResponse.json(
+    await db.user.findUnique({
+      where: {
+        name: session.user.name,
+        image: session.user.image,
+      },
+    }),
+    { status: 200 }
+  );
 
   const userDummyData: Omit<User, "password"> = {
     id: 1,

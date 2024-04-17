@@ -4,6 +4,22 @@ import { IDSchema } from '@/types/id';
 // import { Project } from '@prisma/client';
 import { extractBody } from "@/lib/extractBody";
 import db from '@/lib/prisma';
+import { getServerSession } from "next-auth";
+import { options } from "@/app/api/auth/[...nextauth]/options";
+
+async function assignAuthor(): Promise<number | null> {
+    const session = await getServerSession(options);
+    if (!session?.user) {
+        return null;
+    }
+    const user = await db.user.findUnique({
+        where: { name: session.user.name }
+    });
+    if (user != null) {
+        return user.id
+    }
+    return null
+}
 
 // プロジェクトの一覧が取得できる
 // 未参加のプロジェクトも取得できてしまう
@@ -28,6 +44,16 @@ export async function POST(req: NextRequest) : Promise<Response> {
         data: data
     });
     if(newProject != null){
+        const author = await assignAuthor();
+        if (author != null) {
+            await db.projectOnUser.create({
+                data: {
+                    projectId: newProject.id,
+                    userId: author,
+                    assignedBy: 'owner'
+                }
+            });
+        }
         return new Response(JSON.stringify(newProject), { status: 200 });
     }
     return new Response(`bad request ${newProject}`, { status: 400 });

@@ -1,5 +1,5 @@
 'use client';
-import link from 'next/link';
+
 import { useState } from "react";
 import { Calendar } from "@yamada-ui/calendar";
 import { 
@@ -13,11 +13,13 @@ import {
   Input,
   FormControl,
 } from "@yamada-ui/react";
+import { getSession } from "next-auth/react";
 
 const NewProject = () => {
   const [projectName, setProjectName] = useState('');
   const [calendarValue, setCalendarValue] = useState<Date[]>();
   const [totalTime, setTotalTime] = useState<number>();
+
 
   const handleProjectNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setProjectName(e.target.value);
@@ -39,7 +41,7 @@ const NewProject = () => {
       duration_end: calendarValue[1].toISOString(),
       total_hours: totalTime
     }
-    console.log(data);
+    let projectid = 0;
     fetch('/api/project', {
       method: 'POST',
       headers: {
@@ -50,14 +52,17 @@ const NewProject = () => {
       if (res.ok) {
         console.log('success');
         // project on user レコードを作成しないと作成者が参加できない
-
-        // window.location.replace('/projects');
+        window.location.href = `/projects`;
       } else {
         console.log(res);
+        return 
       }
     }).catch(err => {
       console.log(err);
+      return 
     });
+
+
   };
 
   return (
