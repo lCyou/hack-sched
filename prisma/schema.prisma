@@ -1,17 +1,10 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider = "postgresql"
+  url      = env("POSTGRES_PRISMA_URL")
 }
 
 model User {
@@ -19,31 +12,29 @@ model User {
   name      String          @unique
   email     String?
   password  String?
-  image     String?         @db.Text
+  image     String?
   createdAt DateTime        @default(now())
   updatedAt DateTime        @updatedAt
   projects  ProjectOnUser[]
 }
 
 model Project {
-  id    Int    @id @default(autoincrement())
-  title String
-  // repo url
-
-  duration_start DateTime        @db.Timetz()
-  duration_end   DateTime        @db.Timetz()
+  id             Int             @id @default(autoincrement())
+  title          String
+  duration_start DateTime        @db.Timestamptz(6)
+  duration_end   DateTime        @db.Timestamptz(6)
   total_hours    Int
   users          ProjectOnUser[]
 }
 
 model ProjectOnUser {
   id         Int         @id @default(autoincrement())
-  project    Project     @relation(fields: [projectId], references: [id])
   projectId  Int
-  user       User        @relation(fields: [userId], references: [id])
   userId     Int
-  assignedAt DateTime    @default(now()) @db.Timestamptz()
+  assignedAt DateTime    @default(now()) @db.Timestamptz(6)
   assignedBy String
+  project    Project     @relation(fields: [projectId], references: [id])
+  user       User        @relation(fields: [userId], references: [id])
   timeStates TimeState[]
 
   @@index([projectId, userId])
@@ -51,11 +42,11 @@ model ProjectOnUser {
 
 model TimeState {
   id              Int           @id @default(autoincrement())
-  time_start      DateTime      @db.Timetz() // ここから1時間のみ
+  time_start      DateTime      @db.Timetz(6)
   status          String
-  createdAt       DateTime      @default(now()) @db.Timestamptz()
-  userproject     ProjectOnUser @relation(fields: [projectOnUserId], references: [id])
+  createdAt       DateTime      @default(now()) @db.Timestamptz(6)
   projectOnUserId Int
+  userproject     ProjectOnUser @relation(fields: [projectOnUserId], references: [id])
 
   @@index([projectOnUserId])
 }

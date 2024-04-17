@@ -1,11 +1,12 @@
 'use client'
+import { memo } from "react"
 import Image from "next/image";
 import { Box, Heading, LinkBox, LinkOverlay} from "@yamada-ui/react";
 import image from "@/../public/logo.png";
 import AuthButton from "@/components/header/authButton";
 import MButton from "@/components/header/menuButton";
 
-const Header = () => {
+const Header = memo(function Header() {
   return (
     <Box className="sticky top-0 z-50 items-center w-screen flex justify-between h-30 backdrop-blur-2xl" p="5" rounded="md" color="black">
       <LinkBox className="flex justify-center items-center">
@@ -15,12 +16,12 @@ const Header = () => {
         </LinkOverlay>
         <Heading size="xl">HackSched</Heading>
       </LinkBox>
-      <nav>
+      <nav className="justify-end">
         <MButton />
         <AuthButton />
       </nav>
     </Box>
   );
-}
+});
 
 export default Header;

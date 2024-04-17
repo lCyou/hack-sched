@@ -5,7 +5,7 @@ type Params = {
     name: string
   }
 
-// プロジェクトの一覧が取得できる
+// プロジェクトの一覧が取得できる kore iranaikamo
 export async function GET(req: NextRequest, context: {params: Params}) : Promise<Response>{
     const name = context.params.name;
     const userid = await db.user.findUnique({
